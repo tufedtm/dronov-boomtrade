@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block add_css %}
+    <link rel="stylesheet" href="{% static 'css/login_logout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="ll">
+        {% block ll %}{% endblock %}
+    </div>
+{% endblock %}
