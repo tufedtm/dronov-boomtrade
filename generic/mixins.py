@@ -9,11 +9,11 @@ class CategoryListMixin(ContextMixin):
         return context
 
 
-class PageNumMixin(CategoryListMixin):
+class PageNumberMixin(CategoryListMixin):
     def get_context_data(self, **kwargs):
-        context = super(PageNumMixin, self).get_context_data(**kwargs)
+        context = super(PageNumberMixin, self).get_context_data(**kwargs)
         try:
-            context['pn'] = self.requset.GET['page']
+            context['pn'] = self.request.GET['page']
         except KeyError:
             context['pn'] = '1'
 

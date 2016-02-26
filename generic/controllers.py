@@ -1,7 +1,7 @@
 from django.views.generic.base import View
 
 
-class PageNumView(View):
+class PageNumberView(View):
     def post(self, requset, *args, **kwargs):
         try:
             pn = requset.GET['page']
@@ -10,4 +10,4 @@ class PageNumView(View):
 
         self.success_url = self.success_url + '?page=' + pn
 
-        return super(PageNumView, self).post(requset, *args, **kwargs)
+        return super(PageNumberView, self).post(requset, *args, **kwargs)

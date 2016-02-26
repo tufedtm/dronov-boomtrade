@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block title %}Удаление {{ object.title }}{% endblock %}
+
+{% block main %}
+
+    <h2>Удаление новости</h2>
+    <h4>{{ object.title }}</h4>
+    <p>{{ object.description }}</p>
+    <p class="posted">{{ object.posted|date:'j.m.Y H:i' }}</p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+    </form>
+
+    <p>
+        <a href="{% url 'news_index' %}?page={{ pn }}">Назад</a>
+    </p>
+{% endblock %}
