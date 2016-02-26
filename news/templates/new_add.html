@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load staticfiles %}
 
 {% block title %}Добавление новости{% endblock %}
 
@@ -13,7 +14,14 @@
         </form>
     </div>
 
+    {% include 'generic/file_lister.html' %}
+
     <p>
         <a href="{% url 'news_index' %}">Назад</a>
     </p>
+{% endblock %}
+
+{% block add_js_bottom %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'js/imagepool.js' %}"></script>
 {% endblock %}

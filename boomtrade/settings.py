@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'guestbook',
     'news',
+    'imagepool',
 ]
 
 MIDDLEWARE_CLASSES = [
