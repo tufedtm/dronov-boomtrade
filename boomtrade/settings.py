@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main',
+    'guestbook',
 ]
 
 MIDDLEWARE_CLASSES = [
