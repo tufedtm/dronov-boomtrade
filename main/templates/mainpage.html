@@ -5,6 +5,16 @@
 {% block main %}
     <h2>Все для уборки</h2>
     <p>Фирма &quot;Веник-Торг&quot; продает все необходимое для уборки помещения различного назначения: веники, щетки, метлы, совки и т.д.</p>
+
     <h3>Новости</h3>
+
+    {% for new in news %}
+        <h4>
+            <a href="{% url 'news_detail' new.pk %}">{{ new.title }}</a>
+        </h4>
+        <p>{{ new.description }}</p>
+        <p class="posted">{{ new.posted|date:'j.m.Y H:i' }}</p>
+    {% endfor %}
+
     <h3>Рекомендуемые товары</h3>
 {% endblock %}
