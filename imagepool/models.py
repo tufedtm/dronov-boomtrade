@@ -15,6 +15,9 @@ class ImagePool(models.Model):
         verbose_name = 'изображение'
         verbose_name_plural = 'изображения'
 
+    def __unicode__(self):
+        return self.user.username
+
     def delete(self, using=None, keep_parents=False):
         self.image.delete(save=False)
         super(ImagePool, self).delete()
