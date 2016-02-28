@@ -214,3 +214,45 @@
 .form td:first-child{
     display: none;
 }
+
+
+/*
+ * goods
+*/
+
+.list-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-table th,
+.list-table td{
+    border: 1px solid #666;
+    padding: 5px;
+}
+
+.list-table td.centered{
+    text-align: center;
+}
+
+.old-price{
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.good-images{
+    width: 100px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.good-images div{
+    max-width: 300px;
+    height: 200px;
+    float: left;
+}
+
+.good-images div img{
+    max-width: 300px;
+    height: 200px;
+}
