@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block title %}Правка статьи :: {{ blog.title }}{% endblock %}
+
+{% block main %}
+
+    <h2>Правка статьи</h2>
+
+    <div class="form">
+        <form action="" method="post">
+            {% include 'generic/form.html' %}
+            <div class="submit-button">
+                <input type="submit" value="Обновить">
+            </div>
+        </form>
+    </div>
+
+    {% include 'generic/file_lister.html' %}
+
+    <p>
+        <a href="{% url 'blog_index' %}?page={{ pn }}
+
+            {% if search %}
+                &search={{ search }}
+            {% endif %}
+
+        ">Назад</a>
+    </p>
+
+{% endblock %}
+
+{% block add_js_bottom %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'js/imagepool.js' %}"></script>
+{% endblock %}

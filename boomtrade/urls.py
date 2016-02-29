@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^imagepool/', include('imagepool.urls'), name='imagepool'),
     url(r'^categories/', include('categories.urls'), name='categories'),
     url(r'^goods/', include('goods.urls'), name='goods'),
+    url(r'^blog/', include('blog.urls'), name='blog'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

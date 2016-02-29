@@ -256,3 +256,26 @@
     max-width: 300px;
     height: 200px;
 }
+
+/*
+ * blog
+*/
+
+.blog-article{
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+}
+
+.blog-article h4{
+    margin-top: 0;
+}
+
+.username {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.search-form{
+    float: right;
+}

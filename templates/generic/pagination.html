@@ -5,9 +5,13 @@
             <div id="previous-page">
                 <a href="?page={{ page_obj.previous_page_number }}
                 
-                {% if sort and order %}
-                    &sort={{ sort }}&order={{ order }}
-                {% endif %} 
+                    {% if sort and order %}
+                        &sort={{ sort }}&order={{ order }}
+                    {% endif %}
+
+                    {% if search %}
+                        &search={{ search }}
+                    {% endif %}
                 
                 ">&lt;</a>
             </div>
@@ -17,9 +21,13 @@
             <div id="next-page">
                 <a href="?page={{ page_obj.next_page_number }}
 
-                {% if sort and order %}
-                    &sort={{ sort }}&order={{ order }}
-                {% endif %}
+                    {% if sort and order %}
+                        &sort={{ sort }}&order={{ order }}
+                    {% endif %}
+
+                    {% if search %}
+                        &search={{ search }}
+                    {% endif %}
 
                 ">&gt;</a>
             </div>
@@ -36,9 +44,13 @@
                 {% if page_obj.number != pn %}
                     <a href="?page={{ pn }}
 
-                    {% if sort and order %}
-                        &sort={{ sort }}&order={{ order }}
-                    {% endif %}
+                        {% if sort and order %}
+                            &sort={{ sort }}&order={{ order }}
+                        {% endif %}
+
+                        {% if search %}
+                            &search={{ search }}
+                        {% endif %}
 
                     ">
                 {% endif %}

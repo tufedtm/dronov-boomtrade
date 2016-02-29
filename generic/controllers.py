@@ -13,6 +13,11 @@ class PageNumberView(View):
             self.order = self.request.GET['order']
         except KeyError:
             self.order = 'A'
+
+        try:
+            self.search = self.request.GET['search']
+        except KeyError:
+            self.search = ''
             
         return super(PageNumberView, self).get(request, *args, **kwargs)
 
@@ -23,5 +28,10 @@ class PageNumberView(View):
             pn = '1'
 
         self.success_url = self.success_url + '?page=' + pn
+
+        try:
+            self.success_url = self.success_url + '&search=' + request.GET['search']
+        except KeyError:
+            pass
 
         return super(PageNumberView, self).post(request, *args, **kwargs)
