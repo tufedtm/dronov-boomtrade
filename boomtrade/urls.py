@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.views import login, logout
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,6 +31,10 @@ urlpatterns = [
     url(r'^categories/', include('categories.urls'), name='categories'),
     url(r'^goods/', include('goods.urls'), name='goods'),
     url(r'^blog/', include('blog.urls'), name='blog'),
+    url(r'^about/', TemplateView.as_view(template_name='static_pages/about.html'), name='about'),
+    url(r'^howtobuy/', TemplateView.as_view(template_name='static_pages/how_to_buy.html'), name='howtobuy'),
+    url(r'^contacts/', TemplateView.as_view(template_name='static_pages/contacts.html'), name='contacts'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
